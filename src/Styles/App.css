@@ -1,0 +1,492 @@
+/* Font Monserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,700;1,400;1,500;1,700;1,900&display=swap');
+
+*{box-sizing: border-box;}
+
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height: 100vh;
+}
+
+:root {
+    --main-color:#FF6060;
+}
+
+/* Navbar mobile */
+
+    .logo {
+        display:flex;
+        justify-content:flex-start;
+        width:6rem;
+    }
+
+    .Nav {
+        display: flex;
+        color:var(--main-color);
+        justify-content: space-between;
+        margin:1rem;
+        align-items: center;
+    }
+
+    .nav-txt a {
+        text-decoration: none;
+        color:var(--main-color);
+        margin: .4rem;
+        text-transform: uppercase;
+    }
+
+    .nav-txt a:hover{
+        text-decoration:underline;
+    }
+
+/* Navbar Desktop*/
+
+@media screen and (min-width:769px) {
+.logo {
+    width:10rem;
+}
+
+.Nav {
+    margin: 1rem 3rem; 
+       
+}
+
+.nav-txt a {
+    margin: 0 2rem;
+    margin-right: 0;
+    text-transform: capitalize;
+}
+}
+
+/* Home Mobile */
+.main {
+    width:100%;
+}
+
+.home-banner {
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    object-fit: cover;
+    background-position: center;
+    filter: brightness(95%);
+}
+
+.txt-banner {
+    margin:0;
+    font-weight: 500;
+    font-size:1.9rem; 
+    position:relative;
+    filter:invert(100%);
+    display:flex;
+    justify-content: center;
+    text-align:start; 
+}
+
+/* Home Desktop */
+@media screen and (min-width:769px) {
+    .home-banner {
+        object-position: cover;
+        padding: 3rem;
+        margin: 1.5rem 3rem;
+        border-radius: 1rem;
+    }
+    
+}
+
+/* Error-page Mobile */
+.err-num {
+    font-family: Montserrat;
+    font-size: 7rem;
+    color:var(--main-color);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    color:var(--main-color);
+    margin-bottom:0;
+}
+
+.err-h2 {
+    font-size: medium;
+    margin:1rem 3rem;
+    text-align: center;
+    color:var(--main-color);
+}
+
+.err-p {
+    margin:7rem 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    color:var(--main-color);
+}
+
+/* Error-page Desktop */
+@media screen and (min-width:769px) {
+
+.err-num {
+    font-size: 10rem;
+}
+
+.err-h2 {
+    font-size: 1.5rem;
+}
+
+.err-p {
+    margin: 5rem;
+}
+}
+
+/* Card Mobile */
+.card {
+    width:100%;
+    height: auto;
+    padding:1rem;
+    color:#FF6060
+}
+
+.img-cover {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.loc-card {
+    margin:-2.75rem 1rem 1rem 1rem;
+    display:flex; 
+    color:white;
+    text-decoration: none;
+}
+
+
+.accordion-title:hover,
+.active .accordion-title {
+    cursor:pointer;
+    background: #FF3030;
+}
+
+.accordion-content {
+    visibility:hidden;
+    height:0;
+    opacity:0;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.card-down {
+    margin:1rem 0;
+}
+
+
+.title-h4 {
+    display:flex;
+    justify-content: space-between;
+    background: #FF6060;
+    color:#F6F6F6;
+    margin:0;
+}
+
+.title-h4:hover {
+    background: #FF5050;
+    cursor: pointer;
+}
+
+.text {
+ background: #F6F6F6;
+ margin:0;
+ color:#FF6060;
+ border-radius:0 0 5px 5px;
+margin: 2rem 0;
+border-radius: .3rem;
+}
+
+.text-none {
+    display: none;
+}
+
+
+/* Card Desktop */
+
+@media screen and (min-width:769px) {
+      .wrapper{ 
+        background: #F6F6F6;
+        border-radius: 25px;
+        margin:1rem;
+        display: grid;
+        grid-template-columns: repeat(3,minmax(0, 1fr));
+        grid-template-areas: 
+        "card card card";
+    }
+    
+    .card {
+        width:100%; 
+        overflow: hidden;
+        text-overflow:ellipsis;
+    }
+}
+
+/* About Mobile */
+
+.about-img-banner {
+    width:100%;
+    padding:1rem;
+    height:10rem;
+    border-radius: 2rem;
+    object-position: bottom;
+    object-fit: cover;
+}
+
+.about-menu {
+    margin:1rem;
+}
+
+.title-h4 {
+    border-radius:4px;
+    display: flex;
+    padding: 0.4rem 0.7rem 0.4rem 1rem;
+    background: #FF6060 ;
+    color: #FFFFFF;
+}
+
+.dropdown-btn {
+ width: 1.1rem;
+}
+
+.text {
+    margin: .5rem 1rem;
+}
+
+/* About Desktop */
+@media screen and (min-width:769px) {
+.about-container {
+    margin:2rem;
+}
+
+.about-menu {
+    margin: 1rem 4rem;
+}
+
+.about-menu + .card-down {
+    width:100%;
+    background: #FF3030;
+}
+
+}
+
+/* Logement Mobile */
+.caroussel {
+    margin: 0 1rem;
+   
+}
+
+.slider-container {
+    display:flex;
+    margin-left: .5rem;
+    margin-right: -.5rem;
+}
+
+.pre-btn{
+    width:1rem;
+    z-index: 1; 
+    margin-right: -1.5rem;
+}
+
+.pictures {
+    width:100%;
+    border-radius: 1rem;
+    height: 15rem;
+    object-fit:cover;
+}
+
+.pictures-count {
+    position:absolute;
+    z-index: 1;
+    color:white;
+    bottom: 8rem;
+    right: 50%;
+    visibility:hidden;
+}
+
+.nxt-btn{
+    width:1rem;
+    z-index: 1;
+    margin-left: -1.5rem;
+}
+
+.pre-btn:hover, .nxt-btn:hover {
+    cursor: pointer;
+}
+
+.location-text {
+    margin:0;
+}
+
+.item-title {
+    margin:0 ;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.tags {
+    font-size: .9rem;
+    font-weight: 500;
+    border-radius: 0.7rem;
+    background: #FF6060;
+    color: white;
+    margin: 0.7rem;
+    margin-left: 0;
+    padding: 0.4rem;
+    width: 9rem;
+    display: flex;
+    justify-content: center;
+}
+
+.stars {
+    width:100%;
+}
+
+img.rate { 
+    width: 1.3rem;
+} 
+
+.host {
+    display:flex;
+    justify-content: space-between;
+}
+
+.host-info {
+    display:flex;
+}
+
+.name-txt {
+    width: 100%;
+    margin: -0.4rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    flex-wrap: wrap;
+}
+
+.img-host{
+    display:flex;
+    width:32px;
+    height:32px;
+    border-radius: 50%;
+}
+
+
+.card-down {
+    border-radius: .5rem;
+}
+
+/* Logement Desktop */
+@media screen and (min-width:769px) {
+    .caroussel {
+        margin:1rem 3rem;
+    }
+
+    .pre-btn{
+        width:2rem;
+        margin-right: -2.5rem;
+    }
+
+    .pictures {
+        height:25rem;
+        position: relative;
+    }
+
+    .pictures-count {
+        visibility:visible;
+    }
+
+    .nxt-btn{
+        width:2rem;
+        margin-left: -2.5rem;
+    }
+
+    .img-cover {
+        min-height: 16rem;
+    }
+
+    .card-top {
+        padding: 0 2rem;
+        display:flex;
+        justify-content:space-between;
+    }
+    
+    .tags {
+        flex-direction: row;
+        width:100%;
+    }
+    
+    .host {
+        flex-direction:column-reverse;
+        margin:2rem;
+        margin-right: -1rem;
+    }
+
+    .name-txt {
+        width: 50%;
+    }
+
+    section {
+        padding:0 2rem;
+    }
+
+    .cards-down {
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        gap:3rem;
+    }
+
+    div.card-down {
+        background: #F6F6F6;
+        border-radius: .5rem;
+        width: 50%;
+    }
+
+}
+/* Footer Mobile*/
+
+.footer {
+    width:100%;
+    background-color: black;
+    color:white;
+    text-align: center;
+    height:7rem;
+}
+
+.Foo-content {
+  padding-top:2rem;
+}
+
+.logoFoo {
+    width: 4rem;
+}
+
+.foo-txt {
+    font-size:small;
+}
+
+/* Footer Desktop*/
+
+@media screen and (min-width:769px) {
+.footer {
+    height: 9rem;
+}
+
+.logoFoo {
+    width: 8rem;
+}
+
+.foo-txt {
+    font-size:medium;
+}
+}
