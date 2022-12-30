@@ -68,6 +68,7 @@ export default function FicheLogements() {
                     </div>
                 </div>
                 <div className='cards-down'>
+                    <div className='card-down-lodging'></div>
                     <Dropdown title='Description' description={item.description} />
                     <Dropdown title='Equipments' description={item.equipments} />
                 </div>

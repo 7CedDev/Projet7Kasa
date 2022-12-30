@@ -65,33 +65,42 @@ body {
     width:100%;
 }
 
-.home-banner {
-    margin: 1rem;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    object-fit: cover;
-    background-position: center;
-    filter: brightness(95%);
+.banner-contain{
+    padding: 1rem;
 }
 
+.banner-img {
+    width: 100%;
+    height: 12rem;
+    border-radius: 1.5rem;
+    object-fit: fill;
+    background-position: center;
+    filter: brightness(80%);
+}
+
+
 .txt-banner {
-    margin:0;
+    margin: 0 9rem;
     font-weight: 500;
-    font-size:1.9rem; 
-    position:relative;
-    filter:invert(100%);
-    display:flex;
-    justify-content: center;
-    text-align:start; 
+    position: absolute;
+    filter: invert(100%);
+    text-align: start;
+    top: 21%;
+    left: 9%;
+    z-index: 1;
 }
 
 /* Home Desktop */
 @media screen and (min-width:769px) {
-    .home-banner {
-        object-position: cover;
-        padding: 3rem;
-        margin: 1.5rem 3rem;
-        border-radius: 1rem;
+    
+    .banner-contain{
+        padding:1rem 3rem;
+    }
+
+    .txt-banner {
+      top:27%; 
+      display:flex;
+      justify-content: center;
     }
     
 }
@@ -177,7 +186,8 @@ body {
 }
 
 .card-down {
-    margin:1rem 0;
+    margin-bottom:2rem;
+    border-radius: .5rem;
 }
 
 
@@ -196,7 +206,7 @@ body {
 
 .text {
  background: #F6F6F6;
- margin:0;
+ padding:1rem;
  color:#FF6060;
  border-radius:0 0 5px 5px;
 margin: 2rem 0;
@@ -237,6 +247,7 @@ border-radius: .3rem;
     border-radius: 2rem;
     object-position: bottom;
     object-fit: cover;
+    background: #FF3030;
 }
 
 .about-menu {
@@ -256,17 +267,15 @@ border-radius: .3rem;
 }
 
 .text {
-    margin: .5rem 1rem;
+    margin: 0;
 }
+
 
 /* About Desktop */
 @media screen and (min-width:769px) {
-.about-container {
-    margin:2rem;
-}
 
 .about-menu {
-    margin: 1rem 4rem;
+    margin: 1rem 7rem;
 }
 
 .about-menu + .card-down {
@@ -274,6 +283,9 @@ border-radius: .3rem;
     background: #FF3030;
 }
 
+.card-down-about {
+    width: 100%;
+}
 }
 
 /* Logement Mobile */
@@ -382,8 +394,9 @@ img.rate {
 
 
 .card-down {
-    border-radius: .5rem;
+    
 }
+
 
 /* Logement Desktop */
 @media screen and (min-width:769px) {
@@ -446,7 +459,7 @@ img.rate {
         gap:3rem;
     }
 
-    div.card-down {
+    .card-down-lodging {
         background: #F6F6F6;
         border-radius: .5rem;
         width: 50%;

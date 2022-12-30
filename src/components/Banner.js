@@ -1,11 +1,11 @@
 
-export default function Banner({ image, txtBanner }) {
+export default function Banner({ image }) {
     const img = { image };
     return (
-        <div className="">
-            <img src={image} alt='' className="" />
-            <h1 className={txtBanner}>{txtBanner}</h1>
+        <div className="banner-contain">
+            <img src={image} alt='' className="banner-img" />
         </div>
     )
 
 }
+

@@ -14,11 +14,10 @@ const About = () => {
 
     return (
         <div className='about-container'>
-            <Banner />
-            <img src={banner} alt='AboutBanner' className='about-img-banner' />
+            <Banner image={banner} alt='AboutBanner' className='about-img-banner' />
 
             <div className='about-menu'>
-                {dropdowns}
+                <div className='card-down-about'>{dropdowns}</div>
             </div>
         </div>
     )
