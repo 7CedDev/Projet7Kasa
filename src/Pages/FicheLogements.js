@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import '../Styles/App.css'
 import { useParams } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
 import logementlocation from '../datas/location'
 import Notation from '../components/Notation'
 import Tag from '../components/Tag'
@@ -9,37 +8,15 @@ import Slider from '../components/Slider';
 import Dropdown from '../components/Dropdown'
 
 export default function FicheLogements() {
-    const navigate = useNavigate()
     let { id } = useParams();
-    const [item, setItem] = useState()
-    const [tags, setTags] = useState()
 
-    // const item = logementlocation.find(item => item.id === id);
-    useEffect(async () => {
-        const newItem = await logementlocation.find(item => item.id === id);
-        console.log('newItem', newItem)
-        setItem(newItem)
-    }, [])
-    useEffect(() => {
-        if (item == null) {
-            navigate("/error");
-        } else {
-            const newTags = item.tags.map(tag => {
-                return <Tag text={tag} />
-            })
-            setTags(newTags)
-        }
-    }, [item])
+    const item = logementlocation.find(item => item.id === id);
+    if (!item) { window.location.replace('/error') }
 
 
-    const Equipments = () => {
-        console.log(logementlocation)
-        const equipments = logementlocation.map((equipments) => (
-            < Dropdown title={equipments.title} description={item.equipments} />
-        ))
-
-    }
-
+    const tags = item.tags.map(tag => {
+        return <Tag text={tag} />
+    })
 
     return (
         <div>
@@ -59,7 +36,8 @@ export default function FicheLogements() {
 
                     <div className='host'>
                         <div className='stars'>{item.stars}
-                            <Notation rating={item.rating} />
+                            <Notation key={item.rating} rating={item.rating} />
+
                         </div>
                         <div className='host-info'>
                             <p className='name-txt'>{item.host.name}</p>
@@ -68,9 +46,10 @@ export default function FicheLogements() {
                     </div>
                 </div>
                 <div className='cards-down'>
-                    <div className='card-down-lodging'></div>
-                    <Dropdown title='Description' description={item.description} />
-                    <Dropdown title='Equipments' description={item.equipments} />
+                    <div className='card-down-lodging'>
+                        <Dropdown title='Description' description={item.description} />
+                        <Dropdown title='Equipments' description={item.equipments} />
+                    </div>
                 </div>
             </div>
         </div>

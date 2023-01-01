@@ -11,13 +11,12 @@ function Dropdown(props) {
 
 
     function handleButton() {
-        console.log('handleButton');
         let newImage;
         let newText;
-        if (image == arrow) { newImage = arrowUp }
+        if (image === arrow) { newImage = arrowUp }
         else { newImage = arrow }
         setImage(newImage)
-        if (textClass == 'text') { newText = 'text-none' }
+        if (textClass === 'text') { newText = 'text-none' }
         else { newText = 'text' }
         setTextClass(newText)
     }

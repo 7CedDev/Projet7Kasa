@@ -73,21 +73,20 @@ body {
     width: 100%;
     height: 12rem;
     border-radius: 1.5rem;
-    object-fit: fill;
+    object-fit: cover;
     background-position: center;
     filter: brightness(80%);
 }
 
-
 .txt-banner {
-    margin: 0 9rem;
+    margin: 0 ;
     font-weight: 500;
     position: absolute;
     filter: invert(100%);
-    text-align: start;
     top: 21%;
-    left: 9%;
+    left: 15%;
     z-index: 1;
+    display: flex;
 }
 
 /* Home Desktop */
@@ -99,8 +98,13 @@ body {
 
     .txt-banner {
       top:27%; 
+      right:15%;
       display:flex;
       justify-content: center;
+    }
+
+    .banner br {
+        display:none;
     }
     
 }
@@ -164,32 +168,16 @@ body {
 }
 
 .loc-card {
-    margin:-2.75rem 1rem 1rem 1rem;
+    margin:-2.75rem .5rem .5rem 1rem;
     display:flex; 
     color:white;
     text-decoration: none;
-}
-
-
-.accordion-title:hover,
-.active .accordion-title {
-    cursor:pointer;
-    background: #FF3030;
-}
-
-.accordion-content {
-    visibility:hidden;
-    height:0;
-    opacity:0;
-    overflow: hidden;
-    padding: 0 1rem;
 }
 
 .card-down {
     margin-bottom:2rem;
     border-radius: .5rem;
 }
-
 
 .title-h4 {
     display:flex;
@@ -233,8 +221,13 @@ border-radius: .3rem;
     
     .card {
         width:100%; 
-        overflow: hidden;
-        text-overflow:ellipsis;
+        position: relative;
+    }
+
+    .loc-card {
+    margin: 1.5rem 1rem;
+    position: absolute;
+    bottom: 0.5rem;
     }
 }
 
@@ -276,11 +269,6 @@ border-radius: .3rem;
 
 .about-menu {
     margin: 1rem 7rem;
-}
-
-.about-menu + .card-down {
-    width:100%;
-    background: #FF3030;
 }
 
 .card-down-about {
@@ -374,6 +362,7 @@ img.rate {
 
 .host-info {
     display:flex;
+    padding-bottom: 1rem;
 }
 
 .name-txt {
@@ -390,11 +379,6 @@ img.rate {
     width:32px;
     height:32px;
     border-radius: 50%;
-}
-
-
-.card-down {
-    
 }
 
 
@@ -459,10 +443,17 @@ img.rate {
         gap:3rem;
     }
 
-    .card-down-lodging {
-        background: #F6F6F6;
+    .card-down-lodging {  
         border-radius: .5rem;
-        width: 50%;
+        gap:2rem;
+        display: flex;
+    }
+
+    .card-down-lodging .card-down {
+        width:100%;
+        background: none;
+        display:block;
+
     }
 
 }

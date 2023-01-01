@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Routes>
+      <Routes >
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="error" element={<Error404 />} />

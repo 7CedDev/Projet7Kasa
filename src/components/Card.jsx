@@ -16,7 +16,7 @@ function Card(props) {
     )
 }
 
-Card.propsTypes = {
+Card.propsTypes = { 
     id:PropTypes.string,
     title:PropTypes.string,
     cover:PropTypes.string,
