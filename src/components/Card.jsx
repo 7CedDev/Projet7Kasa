@@ -1,13 +1,8 @@
 import Logements from '../datas/annoncesLogements.json'
-// import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 import '../Styles/App.css'
 
 function Card() {
-    // const path =`logements/${props.id}`
-    // const id = props.id
-    // const title = props.title
-    // const cover = props.cover
 
     return (
         <>
@@ -22,11 +17,5 @@ function Card() {
         })}</>
     )
 }
-
-// Card.propsTypes = { 
-//     id:PropTypes.string,
-//     title:PropTypes.string,
-//     cover:PropTypes.string,}
-
  
 export default (Card)

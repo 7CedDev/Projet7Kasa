@@ -9,7 +9,6 @@ function Dropdown(props) {
     const [image, setImage] = useState(arrow)
     const [textClass, setTextClass] = useState('text-none')
 
-
     function handleButton() {
         let newImage;
         let newText;
@@ -21,9 +20,7 @@ function Dropdown(props) {
         setTextClass(newText)
     }
 
-
     return (
-
         <div className='card-down'>
             <h4 onClick={handleButton} className='title-h4'>{title}
                 <img className='dropdown-btn' src={image} alt='dropdown-arrow' /></h4>
