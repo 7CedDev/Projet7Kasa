@@ -28,18 +28,19 @@ body {
         justify-content: space-between;
         margin:1rem;
         align-items: center;
-    }
+    }    
 
-    .nav-txt a {
+    .nav-txt {
         text-decoration: none;
         color:var(--main-color);
         margin: .4rem;
         text-transform: uppercase;
     }
 
-    .nav-txt a:hover{
-        text-decoration:underline;
+    .active {
+        text-decoration: underline;
     }
+
 
 /* Navbar Desktop*/
 
@@ -53,11 +54,12 @@ body {
        
 }
 
-.nav-txt a {
+.nav-txt {
     margin: 0 2rem;
     margin-right: 0;
     text-transform: capitalize;
 }
+
 }
 
 /* Home Mobile */
@@ -165,6 +167,7 @@ body {
     width: 100%;
     object-fit: cover;
     border-radius: 1rem;
+    min-height: 20rem;
 }
 
 .loc-card {
@@ -202,6 +205,7 @@ body {
  color:#FF6060;
  margin: 2rem 0;
  border-radius: .3rem;
+ list-style-type: none;
 }
 
 .text-none {
@@ -292,9 +296,11 @@ body {
 }
 
 .pre-btn{
-    width:1rem;
-    z-index: 1; 
-    margin-right: -1.5rem;
+    width: 1rem;
+    z-index: 1;
+    position: absolute;
+    left: 2rem;
+    top: 28%;
 }
 
 .pictures {
@@ -392,8 +398,9 @@ img.rate {
     }
 
     .pre-btn{
-        width:2rem;
-        margin-right: -2.5rem;
+        width: 2rem;
+        top: 42%;
+        margin-left: 2rem;
     }
 
     .pictures {

@@ -7,7 +7,7 @@ function Dropdown(props) {
     const title = props.title
     const description = props.description
     const [image, setImage] = useState(arrow)
-    const [textClass, setTextClass] = useState('text')
+    const [textClass, setTextClass] = useState('text-none')
 
 
     function handleButton() {

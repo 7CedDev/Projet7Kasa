@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import logementlocation from '../datas/location'
 import Notation from '../components/Notation'
 import Tag from '../components/Tag'
-import Slider from '../components/Slider';
+import Gallery from '../components/Gallery';
 import Dropdown from '../components/Dropdown'
 
 export default function FicheLogements() {
@@ -18,13 +18,17 @@ export default function FicheLogements() {
         return <Tag text={tag} />
     })
 
+    const equipments = item.equipments;
+    const equipmentsList = equipments.map((equipment, index) => {
+        return <li key={index}>{equipment}</li>
+    })
     return (
         <div>
             <div className='caroussel'>
-                <Slider pictures={item.pictures} />
+                <Gallery pictures={item.pictures} />
             </div>
 
-            <div className='card'>
+            <div key={id} className='card'>
                 <div className='card-top'>
                     <div className='location-text'>
                         <h2 className='item-title'>{item.title}</h2>
@@ -48,7 +52,7 @@ export default function FicheLogements() {
                 <div className='cards-down'>
                     <div className='card-down-lodging'>
                         <Dropdown title='Description' description={item.description} />
-                        <Dropdown title='Equipments' description={item.equipments} />
+                        <Dropdown title='Equipements' description={equipmentsList} />
                     </div>
                 </div>
             </div>

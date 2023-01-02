@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Routes, Route, } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import './Styles/App.css'
 import Home from './Pages/Home'
 import About from './Pages/About'
@@ -7,6 +7,7 @@ import Error404 from './Pages/Error404'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import FicheLogements from './Pages/FicheLogements'
+
 
 function App() {
   return (

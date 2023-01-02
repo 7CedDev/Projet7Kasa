@@ -7,7 +7,7 @@ import Banner from '../components/Banner'
 
 const About = () => {
     const dropdowns = AboutDatas.map((item) => (
-        <Dropdown title={item.title} description={item.text} />
+        <Dropdown key={item.id} title={item.title} description={item.text} />
     ))
 
     return (
