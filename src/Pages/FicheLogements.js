@@ -15,7 +15,7 @@ export default function FicheLogements() {
 
 
     const tags = item.tags.map(tag => {
-        return <Tag text={tag} />
+        return <Tag text={tag} key={tag} />
     })
 
     const equipments = item.equipments;
@@ -23,7 +23,7 @@ export default function FicheLogements() {
         return <li key={index}>{equipment}</li>
     })
     return (
-        <div>
+        <>
             <div className='caroussel'>
                 <Gallery pictures={item.pictures} />
             </div>
@@ -39,10 +39,10 @@ export default function FicheLogements() {
                     </div>
 
                     <div className='host'>
-                        <div className='stars'>{item.stars}
-                            <Notation key={item.rating} rating={item.rating} />
 
-                        </div>
+                        <Notation key={item.stars} rating={item.rating} className='stars'>{item.stars}</Notation>
+
+
                         <div className='host-info'>
                             <p className='name-txt'>{item.host.name}</p>
                             <img className='img-host' src={item.host.picture} alt={item.id} />
@@ -56,7 +56,7 @@ export default function FicheLogements() {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
 
 
     )

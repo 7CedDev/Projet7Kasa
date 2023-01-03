@@ -1,5 +1,5 @@
 import Logements from '../datas/annoncesLogements.json'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import '../Styles/App.css'
 
 function Card() {
@@ -10,8 +10,11 @@ function Card() {
             const {cover,title, id } = item;
             return(
                  <div key={id} className='card'> 
-                    <img className='img-cover' src={cover} alt={id} />
-                    <Link to={'logements/' + id}  className='loc-card'>{title}</Link>
+                    <NavLink to={'logements/' + id} className='img-link'>
+                    <img className='img-cover' src={cover} alt={id}/>
+                        <p className='loc-card'>{title}</p>
+                        
+                    </NavLink>    
                 </div> 
             )
         })}</>

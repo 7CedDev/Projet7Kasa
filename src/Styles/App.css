@@ -119,7 +119,7 @@ body {
     font-weight: 700;
     display: flex;
     justify-content: center;
-    flex-direction: center;
+    /* flex-direction: center; */
     color:var(--main-color);
     margin-bottom:0;
 }
@@ -135,7 +135,7 @@ body {
     margin:7rem 2rem;
     display: flex;
     justify-content: center;
-    flex-direction: center;
+    /* flex-direction: center; */
     color:var(--main-color);
 }
 
@@ -170,11 +170,15 @@ body {
     min-height: 20rem;
 }
 
+.img-link {
+    text-decoration: none;
+}
+
 .loc-card {
     margin:-2.75rem .5rem .5rem 1rem;
     display:flex; 
     color:white;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 .card-down {

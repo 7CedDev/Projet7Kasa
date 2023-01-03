@@ -6,14 +6,12 @@ export default function Notation(props) {
     let stars = []
     for (let i = 0; i < 5; i++) {
         if (i < rating) {
-            stars.push(<img className='rate' src={star} alt='red stars' />)
+            stars.push(<img className='rate' src={star} alt='red stars' key={i} />)
         }
         else {
-            stars.push(<img className='rate' src={starGrey} alt='grey stars' />)
+            stars.push(<img className='rate' src={starGrey} alt='grey stars' key={i} />)
         }
     }
 
-    return (<section key={rating}>
-        {stars}
-    </section>)
+    return (<section>{stars}</section>)
 }
