@@ -41,4 +41,6 @@ export default function Slider(props) {
     </div>)
 
 
+
+
 }
