@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Projet7Kasa/static/css/main.95603af7.css",
+    "main.js": "/Projet7Kasa/static/js/main.3812ba99.js",
+    "static/js/787.0ce615c0.chunk.js": "/Projet7Kasa/static/js/787.0ce615c0.chunk.js",
+    "static/media/aboutBanner.png": "/Projet7Kasa/static/media/aboutBanner.02e1c4f7498de1cb845b.png",
+    "static/media/homeBanner.png": "/Projet7Kasa/static/media/homeBanner.024f945a990ae17b81b7.png",
+    "index.html": "/Projet7Kasa/index.html",
+    "static/media/star.svg": "/Projet7Kasa/static/media/star.4949d967956f67c591576c1c58b597ba.svg",
+    "static/media/ArrowDown.svg": "/Projet7Kasa/static/media/ArrowDown.16b912f87ce2849e129df0379fac8d0e.svg",
+    "static/media/next.svg": "/Projet7Kasa/static/media/next.88153a5d119c2744ffe34dca1ef843df.svg",
+    "static/media/previous.svg": "/Projet7Kasa/static/media/previous.19918a1634b1441a25ae0b50e6b1f85b.svg",
+    "static/media/ArrowUp.svg": "/Projet7Kasa/static/media/ArrowUp.d0393e6dd313baf543be9c1f2b575cde.svg",
+    "main.95603af7.css.map": "/Projet7Kasa/static/css/main.95603af7.css.map",
+    "main.3812ba99.js.map": "/Projet7Kasa/static/js/main.3812ba99.js.map",
+    "787.0ce615c0.chunk.js.map": "/Projet7Kasa/static/js/787.0ce615c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.95603af7.css",
+    "static/js/main.3812ba99.js"
+  ]
+}
