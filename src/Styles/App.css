@@ -84,7 +84,7 @@ body {
   font-weight: 500;
   position: absolute;
   filter: invert(100%);
-  top: 18%;
+  top: 15%;
   left: 15%;
   z-index: 1;
   display: flex;
@@ -97,7 +97,7 @@ body {
   }
 
   .txt-banner {
-    top: 27%;
+    top: 18%;
     right: 15%;
     display: flex;
     justify-content: center;
